@@ -8,6 +8,9 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
   # root "posts#index"
 
+  # admin-only index of all users
+  get "/users", to: "users#index"
+
   post "/signup", to: "users#create"
   post "/login", to: "auth#login"
 
@@ -19,6 +22,6 @@ Rails.application.routes.draw do
     member do
       post :submit
     end
-    resources :questions, only: [ :create, :update, :destroy ]
+    resources :questions, only: [ :create, :update, :destroy, :show ]
   end
 end

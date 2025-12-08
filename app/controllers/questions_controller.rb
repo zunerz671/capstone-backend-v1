@@ -2,6 +2,17 @@ class QuestionsController < ApplicationController
   before_action :set_assessment
   before_action :require_admin
 
+  def show
+    question = @assessment.questions.find(params[:id])
+
+    render json: {
+      id: question.id,
+      title: question.title,
+      image_url: question.image_url,
+      correct_answer: question.correct_answer
+    }
+  end
+
   # POST /assessments/:assessment_id/questions (admin)
   def create
     question = @assessment.questions.new(question_params)
@@ -38,6 +49,6 @@ class QuestionsController < ApplicationController
   end
 
   def question_params
-    params.require(:question).permit(:title, :image_url, :correct_answer)
+    params.permit(:title, :image_url, :correct_answer)
   end
 end
