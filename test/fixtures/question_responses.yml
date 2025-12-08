@@ -1,0 +1,15 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  response: MyString
+  correct: false
+  user: one
+  question: one
+  assessment_attempt: one
+
+two:
+  response: MyString
+  correct: false
+  user: two
+  question: two
+  assessment_attempt: two
