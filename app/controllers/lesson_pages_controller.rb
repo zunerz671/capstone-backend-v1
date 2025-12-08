@@ -1,5 +1,6 @@
 class LessonPagesController < ApplicationController
   before_action :set_lesson
+  before_action :require_admin
 
   # POST /lessons/:lesson_id/lesson_pages (admin)
   def create

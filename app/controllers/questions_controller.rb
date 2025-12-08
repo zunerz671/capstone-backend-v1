@@ -1,5 +1,6 @@
 class QuestionsController < ApplicationController
   before_action :set_assessment
+  before_action :require_admin
 
   # POST /assessments/:assessment_id/questions (admin)
   def create

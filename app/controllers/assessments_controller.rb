@@ -1,4 +1,6 @@
 class AssessmentsController < ApplicationController
+  before_action :require_admin, only: [ :create, :update, :destroy ]
+
   # GET /assessments
   def index
     assessments = Assessment.includes(:lesson).all

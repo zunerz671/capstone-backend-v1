@@ -28,6 +28,12 @@ class ApplicationController < ActionController::API
   end
 
   def current_user
-  @current_user
+    @current_user
+  end
+
+  def require_admin
+    unless current_user&.role == "admin"
+      render json: { error: "Admin access required" }, status: :forbidden
+    end
   end
 end
