@@ -16,6 +16,9 @@ Rails.application.routes.draw do
   end
 
   resources :assessments do
+    member do
+      post :submit
+    end
     resources :questions, only: [ :create, :update, :destroy ]
   end
 end
