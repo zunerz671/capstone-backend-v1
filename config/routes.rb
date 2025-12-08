@@ -10,4 +10,12 @@ Rails.application.routes.draw do
 
   post "/signup", to: "users#create"
   post "/login", to: "auth#login"
+
+  resources :lessons do
+    resources :lesson_pages, only: [ :create, :update, :destroy ]
+  end
+
+  resources :assessments do
+    resources :questions, only: [ :create, :update, :destroy ]
+  end
 end
