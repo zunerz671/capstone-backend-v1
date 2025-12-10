@@ -1,0 +1,250 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "role": "student",
+      "email": "student@example.com",
+      "password_digest": "$2a$12$Fs1CfJFAYOQgHy0SLwRLx.LA6v0eSOGq4LIqQlbSFcin70fxY/ah2",
+      "created_at": "2025-12-08 03:56:55 UTC",
+      "updated_at": "2025-12-08 03:56:55 UTC"
+    },
+    {
+      "id": 2,
+      "role": "admin",
+      "email": "admin@example.com",
+      "password_digest": "$2a$12$DmKRue4v4tPndKkDExOFZe1ahR4aTMb24T8ppKry8JgSFgE9BD2Vi",
+      "created_at": "2025-12-08 07:40:30 UTC",
+      "updated_at": "2025-12-08 07:40:30 UTC"
+    },
+    {
+      "id": 3,
+      "role": "student",
+      "email": "student2@example.com",
+      "password_digest": "$2a$12$r47jQzhhcqDV1PtdpKF0Ke/t.VdOnMaxscZ6o6v7L8rm4Z7lNkz9C",
+      "created_at": "2025-12-09 01:29:11 UTC",
+      "updated_at": "2025-12-09 01:29:11 UTC"
+    }
+  ],
+  "lessons": [
+    {
+      "id": 1,
+      "title": "Lesson 1 - Addition Basics",
+      "body": "Introduction to simple addition with small numbers.",
+      "created_at": "2025-12-08 07:31:39 UTC",
+      "updated_at": "2025-12-08 07:31:39 UTC"
+    }
+  ],
+  "lesson_pages": [
+    {
+      "id": 1,
+      "lesson_id": 1,
+      "title": "Page 1",
+      "image_url": "/lesson_images/lesson1_addition_page1.png",
+      "position": 1,
+      "created_at": "2025-12-08 07:31:39 UTC",
+      "updated_at": "2025-12-08 07:31:39 UTC"
+    },
+    {
+      "id": 2,
+      "lesson_id": 1,
+      "title": "Page 2",
+      "image_url": "/lesson_images/lesson1_addition_page2.png",
+      "position": 2,
+      "created_at": "2025-12-08 07:31:39 UTC",
+      "updated_at": "2025-12-08 07:31:39 UTC"
+    },
+    {
+      "id": 3,
+      "lesson_id": 1,
+      "title": "Page 3",
+      "image_url": "/lesson_images/lesson1_addition_page3.png",
+      "position": 3,
+      "created_at": "2025-12-08 07:31:39 UTC",
+      "updated_at": "2025-12-08 07:31:39 UTC"
+    }
+  ],
+  "assessments": [
+    {
+      "id": 1,
+      "title": "Assessment 1 - Addition Basics",
+      "version": 1,
+      "lesson_id": 1,
+      "created_at": "2025-12-08 07:31:39 UTC",
+      "updated_at": "2025-12-08 07:31:39 UTC"
+    }
+  ],
+  "questions": [
+    {
+      "id": 1,
+      "title": "Q1",
+      "image_url": "/question_images/assessment1_addition_q1.png",
+      "correct_answer": "2",
+      "assessment_id": 1,
+      "lesson_id": 1,
+      "created_at": "2025-12-08 07:31:39 UTC",
+      "updated_at": "2025-12-08 07:31:39 UTC"
+    },
+    {
+      "id": 2,
+      "title": "Q2",
+      "image_url": "/question_images/assessment1_addition_q2.png",
+      "correct_answer": "4",
+      "assessment_id": 1,
+      "lesson_id": 1,
+      "created_at": "2025-12-08 07:31:39 UTC",
+      "updated_at": "2025-12-08 07:31:39 UTC"
+    },
+    {
+      "id": 3,
+      "title": "Q3",
+      "image_url": "/question_images/assessment1_addition_q3.png",
+      "correct_answer": "6",
+      "assessment_id": 1,
+      "lesson_id": 1,
+      "created_at": "2025-12-08 07:31:39 UTC",
+      "updated_at": "2025-12-08 07:31:39 UTC"
+    },
+    {
+      "id": 4,
+      "title": "Q4",
+      "image_url": "/question_images/assessment1_addition_q4.png",
+      "correct_answer": "8",
+      "assessment_id": 1,
+      "lesson_id": 1,
+      "created_at": "2025-12-08 09:29:31 UTC",
+      "updated_at": "2025-12-08 09:32:22 UTC"
+    },
+    {
+      "id": 5,
+      "title": "Q5",
+      "image_url": "/question_images/assessment1_addition_q5.png",
+      "correct_answer": "10",
+      "assessment_id": 1,
+      "lesson_id": 1,
+      "created_at": "2025-12-08 09:37:19 UTC",
+      "updated_at": "2025-12-08 09:37:19 UTC"
+    }
+  ],
+  "assessment_attempts": [
+    {
+      "id": 1,
+      "user_id": 1,
+      "assessment_id": 1,
+      "score": 4,
+      "completed_at": "2025-12-09 02:36:53 UTC",
+      "created_at": "2025-12-09 02:36:53 UTC",
+      "updated_at": "2025-12-09 02:36:53 UTC"
+    },
+    {
+      "id": 2,
+      "user_id": 1,
+      "assessment_id": 1,
+      "score": 5,
+      "completed_at": "2025-12-09 09:30:25 UTC",
+      "created_at": "2025-12-09 09:30:25 UTC",
+      "updated_at": "2025-12-09 09:30:25 UTC"
+    }
+  ],
+  "question_responses": [
+    {
+      "id": 1,
+      "response": "2",
+      "correct": true,
+      "user_id": 1,
+      "question_id": 1,
+      "assessment_attempt_id": 1,
+      "created_at": "2025-12-09 02:36:53 UTC",
+      "updated_at": "2025-12-09 02:36:53 UTC"
+    },
+    {
+      "id": 2,
+      "response": "4",
+      "correct": true,
+      "user_id": 1,
+      "question_id": 2,
+      "assessment_attempt_id": 1,
+      "created_at": "2025-12-09 02:36:53 UTC",
+      "updated_at": "2025-12-09 02:36:53 UTC"
+    },
+    {
+      "id": 3,
+      "response": "6",
+      "correct": true,
+      "user_id": 1,
+      "question_id": 3,
+      "assessment_attempt_id": 1,
+      "created_at": "2025-12-09 02:36:53 UTC",
+      "updated_at": "2025-12-09 02:36:53 UTC"
+    },
+    {
+      "id": 4,
+      "response": "8",
+      "correct": true,
+      "user_id": 1,
+      "question_id": 4,
+      "assessment_attempt_id": 1,
+      "created_at": "2025-12-09 02:36:53 UTC",
+      "updated_at": "2025-12-09 02:36:53 UTC"
+    },
+    {
+      "id": 5,
+      "response": "9",
+      "correct": false,
+      "user_id": 1,
+      "question_id": 5,
+      "assessment_attempt_id": 1,
+      "created_at": "2025-12-09 02:36:53 UTC",
+      "updated_at": "2025-12-09 02:36:53 UTC"
+    },
+    {
+      "id": 6,
+      "response": "2",
+      "correct": true,
+      "user_id": 1,
+      "question_id": 1,
+      "assessment_attempt_id": 2,
+      "created_at": "2025-12-09 09:30:25 UTC",
+      "updated_at": "2025-12-09 09:30:25 UTC"
+    },
+    {
+      "id": 7,
+      "response": "4",
+      "correct": true,
+      "user_id": 1,
+      "question_id": 2,
+      "assessment_attempt_id": 2,
+      "created_at": "2025-12-09 09:30:25 UTC",
+      "updated_at": "2025-12-09 09:30:25 UTC"
+    },
+    {
+      "id": 8,
+      "response": "6",
+      "correct": true,
+      "user_id": 1,
+      "question_id": 3,
+      "assessment_attempt_id": 2,
+      "created_at": "2025-12-09 09:30:25 UTC",
+      "updated_at": "2025-12-09 09:30:25 UTC"
+    },
+    {
+      "id": 9,
+      "response": "8",
+      "correct": true,
+      "user_id": 1,
+      "question_id": 4,
+      "assessment_attempt_id": 2,
+      "created_at": "2025-12-09 09:30:25 UTC",
+      "updated_at": "2025-12-09 09:30:25 UTC"
+    },
+    {
+      "id": 10,
+      "response": "10",
+      "correct": true,
+      "user_id": 1,
+      "question_id": 5,
+      "assessment_attempt_id": 2,
+      "created_at": "2025-12-09 09:30:25 UTC",
+      "updated_at": "2025-12-09 09:30:25 UTC"
+    }
+  ]
+}
