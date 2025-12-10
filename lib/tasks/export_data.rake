@@ -36,9 +36,6 @@ namespace :db do
     # Import in correct order for foreign key dependencies
     import_order = [ "users", "lessons", "lesson_pages", "assessments", "questions", "assessment_attempts", "question_responses" ]
 
-    # Disable foreign key checks during import
-    ActiveRecord::Base.connection.execute("SET session_replication_role = 'replica';") if ActiveRecord::Base.connection.adapter_name == "PostgreSQL"
-
     import_order.each do |table_name|
       next unless data[table_name]
 
@@ -69,9 +66,6 @@ namespace :db do
 
       puts "✓ Imported #{records.count} #{table_name}"
     end
-
-    # Re-enable foreign key checks
-    ActiveRecord::Base.connection.execute("SET session_replication_role = 'origin';") if ActiveRecord::Base.connection.adapter_name == "PostgreSQL"
 
     puts "\n✅ Data import complete!"
   end
